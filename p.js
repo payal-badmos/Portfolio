@@ -1,5 +1,5 @@
 const topBtn = document.getElementById("topBtn");
-
+const toggleBtn = document.getElementById("theme-toggle");
 // Show button when user scrolls down
 window.onscroll = function () {
     if (
@@ -18,4 +18,16 @@ topBtn.addEventListener("click", function () {
         top: 0,
         behavior: "smooth"
     });
+});
+
+toggleBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        toggleBtn.textContent = "☀️";
+    } else {
+        toggleBtn.textContent = "🌙";
+    }
+
 });
