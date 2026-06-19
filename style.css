@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111827;
+    background-image:
+        linear-gradient(
+            rgba(17, 24, 39, 0.75),
+            rgba(17, 24, 39, 0.75)
+        ),
+        url("image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(31, 41, 55, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #60a7fe;
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px 60px;
+    min-height: 90vh;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-text h3 {
+    font-size: 24px;
+    color: #60a5fa;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.hero-text button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #60a5fa;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: #3b82f6;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    color: #60a5fa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+    text-align: center;
+}
+
+.about {
+    padding: 80px 60px;
+}
+
+.skills h2{
+    font-size: 28px;
+    color: #60a5fa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.skills{
+     line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+    text-align: center;
+}
+
+/* Projects Section */
+
+.projects {
+    padding: 80px 60px;
+}
+
+.projects h2 {
+    text-align: center;
+    color: #60a5fa;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background: rgba(31, 41, 55, 0.65);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border-left: 5px solid #60a5fa;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.2);
+}
+
+.project-card h3 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.project-card p {
+    color: #d1d5db;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.contact {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #60a5fa;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    color: #3b82f6;
+    margin-top: 20px;
+}
+a {
+    color: rgba(237, 237, 240, 0.927);
+}
+footer {
+    text-align: center;
+    background: #1f2937;
+    color: #9ca3af;
+}
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+     .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+     .about,
+    .projects,
+    .contact {
+        padding: 60px 20px;
+    }
+}
+#topBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    background-color: #57558c;
+    color: white;
+
+    z-index: 1000;
+}
+
+#topBtn:hover {
+    background-color: #6894fd;
+}
