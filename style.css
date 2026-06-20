@@ -9,8 +9,8 @@ body {
     background-color: #111827;
     background-image:
         linear-gradient(
-            rgba(17, 24, 39, 0.75),
-            rgba(17, 24, 39, 0.75)
+            rgba(17, 24, 39, 0.85),
+            rgba(17, 24, 39, 0.85)
         ),
         url("image.png");
 
@@ -30,10 +30,15 @@ a {
 
 .navbar {
     display: flex;
+    position:fixed;
+    top: 0;
+
+    z-index: 1000;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 18px 60px;
-    background: rgba(31, 41, 55, 0.8);
+    background: rgba(31, 41, 55, 0.95);
     backdrop-filter: blur(10px);
 }
 .nav-right{
@@ -93,10 +98,30 @@ border: solid 2px #60a5fa;
     text-decoration: none;
     color: white;
     transition: 0.3s;
+     position: relative;
 }
 
 .nav-links a:hover {
     color: #60a5fa;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 0;
+    bottom: -5px;
+
+    background: #60a5fa;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -237,6 +262,7 @@ border: solid 2px #60a5fa;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
+    
 }
 
 .skill-card {
@@ -246,7 +272,7 @@ border: solid 2px #60a5fa;
     border-radius: 15px;
     text-align: center;
     transition: 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid #60a5fa;
 }
 
 .skill-card:hover {
@@ -343,8 +369,8 @@ border: solid 2px #60a5fa;
 
     .navbar {
         flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+        gap: 15px;
+        padding: 15px;
     }
     .nav-right {
         flex-direction: column;
@@ -551,3 +577,6 @@ body.light-mode .copyright {
 body.light-mode #topBtn {
     background: #2563eb;
 }
+
+
+

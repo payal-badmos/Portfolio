@@ -1,5 +1,7 @@
 const topBtn = document.getElementById("topBtn");
 const toggleBtn = document.getElementById("theme-toggle");
+const text = "Frontend Developer";
+let i = 0;
 // Show button when user scrolls down
 window.onscroll = function () {
     if (
@@ -31,3 +33,12 @@ toggleBtn.addEventListener("click", () => {
     }
 
 });
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+    }
+}
+
+typeWriter();
