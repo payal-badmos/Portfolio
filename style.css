@@ -389,7 +389,31 @@ border: solid 2px #60a5fa;
         height: 55px;
     }
      .hero {
-        padding-top: 180px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        padding: 220px 20px 60px;
+        gap: 30px;
+
+        min-height: auto;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+        max-width: 70vw;
     }
     .hero-text h1{
         font-size: 42px;
@@ -410,15 +434,6 @@ border: solid 2px #60a5fa;
         width: 38px;
         height: 38px;
         font-size: 14px;
-    }
-    .hero-image {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .hero-image img {
-         max-width: 250px;
-                width: 70vw;
     }
      .hero-buttons{
         flex-direction: column;
