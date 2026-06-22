@@ -61,3 +61,10 @@ This portfolio is fully responsive and optimized for:
 - Mobile Phones
 - Laptops
 - Desktop Screens
+
+## Author
+
+**Palak Singh**
+
+Frontend Developer & Web Development Learner
+
